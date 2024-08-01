@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Sheet Calculation</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="left-header">
+                <img src="/assets/HICET logo.png" alt="College Logo" class="logo">
+                <div class="sr-no">
+                    <label for="srNo">Sr. No.:</label>
+                    <input type="text" id="srNo" name="srNo" value="00000000" readonly>
+                </div>
+            </div>
+            <div class="college-info">
+                <h1>Hindusthan College of Engineering and Technology</h1>
+                <p>Associated with Anna University</p>
+                <p>An Autonomous Institution Recognized by Government of India</p>
+                <h2 style="color: brown;">Annual Statement of Marks</h2>
+            </div>
+            <div class="right-header">
+                <img src="/assets/download.png" alt="QR Code" class="qrcode">
+            </div>
+        </div>
+        <form id="markSheetForm">
+            <div class="form-section">
+                <div class="form-group">
+                    <label for="candidateName">Name of the Candidate:</label>
+                    <input type="text" id="candidateName" name="candidateName" required>
+                </div>
+                <div class="form-group">
+                    <label for="courseName">Course name with Code:</label>
+                    <input type="text" id="courseName" name="courseName" value="Information Technology" readonly>
+                    <input type="text" id="courseCode" name="courseCode" value="21IT2001" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="registrationNumber">Reg. No.:</label>
+                    <input type="text" id="registrationNumber" name="registrationNumber" required>
+                </div>
+                <div class="form-group">
+                    <label for="enrollmentNumber">Enrollment No.:</label>
+                    <input type="text" id="enrollmentNumber" name="enrollmentNumber" required>
+                </div>
+                <div class="form-group">
+                    <label for="trainingCentreName">Authorized Training Centre Name:</label>
+                    <input type="text" id="trainingCentreName" name="trainingCentreName" required>
+                </div>
+                <div class="form-group">
+                    <label for="trainingCentreCode">Authorized Training Centre Code:</label>
+                    <input type="text" id="trainingCentreCode" name="trainingCentreCode" required>
+                </div>
+            </div>
+            <h2>Marks Obtained In Figures</h2>
+            <div class="marks-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Subject Code</th>
+                            <th>Subject Name</th>
+                            <th>Theory</th>
+                            <th>Practical</th>
+                            <th>Total</th>
+                            <th>In Words</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>21IT101</td>
+                            <td>Web Technology</td>
+                            <td><input type="number" id="subject1Theory" name="subject1Theory" min="0" max="70" required></td>
+                            <td><input type="number" id="subject1Practical" name="subject1Practical" min="0" max="30" required></td>
+                            <td><span id="subject1Total">0</span></td>
+                            <td><span id="subject1Words">Zero</span></td>
+                        </tr>
+                        <tr>
+                            <td>21IT102</td>
+                            <td>Artificial Intelligence</td>
+                            <td><input type="number" id="subject2Theory" name="subject2Theory" min="0" max="70" required></td>
+                            <td><input type="number" id="subject2Practical" name="subject2Practical" min="0" max="30" required></td>
+                            <td><span id="subject2Total">0</span></td>
+                            <td><span id="subject2Words">Zero</span></td>
+                        </tr>
+                        <tr>
+                            <td>21IT103</td>
+                            <td>Data Science</td>
+                            <td><input type="number" id="subject3Theory" name="subject3Theory" min="0" max="70" required></td>
+                            <td><input type="number" id="subject3Practical" name="subject3Practical" min="0" max="30" required></td>
+                            <td><span id="subject3Total">0</span></td>
+                            <td><span id="subject3Words">Zero</span></td>
+                        </tr>
+                        <tr>
+                            <td>21IT104</td>
+                            <td>Data Structures</td>
+                            <td><input type="number" id="subject4Theory" name="subject4Theory" min="0" max="70" required></td>
+                            <td><input type="number" id="subject4Practical" name="subject4Practical" min="0" max="30" required></td>
+                            <td><span id="subject4Total">0</span></td>
+                            <td><span id="subject4Words">Zero</span></td>
+                        </tr>
+                        <tr>
+                            <td>21IT105</td>
+                            <td>Softwaare Management</td>
+                            <td><input type="number" id="subject5Theory" name="subject5Theory" min="0" max="70" required></td>
+                            <td><input type="number" id="subject5Practical" name="subject5Practical" min="0" max="30" required></td>
+                            <td><span id="subject5Total">0</span></td>
+                            <td><span id="subject5Words">Zero</span></td>
+                        </tr>
+                        <tr>
+                            <td>21IT106</td>
+                            <td>MySql</td>
+                            <td><input type="number" id="subject6Theory" name="subject6Theory" min="0" max="70" required></td>
+                            <td><input type="number" id="subject6Practical" name="subject6Practical" min="0" max="30" required></td>
+                            <td><span id="subject6Total">0</span></td>
+                            <td><span id="subject6Words">Zero</span></td>
+                        </tr>
+                        <tr>
+                            <td>21IT107</td>
+                            <td>Deep learning</td>
+                            <td><input type="number" id="subject7Theory" name="subject7Theory" min="0" max="70" required></td>
+                            <td><input type="number" id="subject7Practical" name="subject7Practical" min="0" max="30" required></td>
+                            <td><span id="subject7Total">0</span></td>
+                            <td><span id="subject7Words">Zero</span></td>
+                        </tr>
+                        <tr>
+                            <td>21IT108</td>
+                            <td>Cloud Computing</td>
+                            <td><input type="number" id="subject8Theory" name="subject8Theory" min="0" max="70" required></td>
+                            <td><input type="number" id="subject8Practical" name="subject8Practical" min="0" max="30" required></td>
+                            <td><span id="subject8Total">0</span></td>
+                            <td><span id="subject8Words">Zero</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="result-section">
+                <div class="form-group">
+                    <label for="grandTotal">Grand Total:</label>
+                    <input type="text" id="grandTotal" name="grandTotal" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="totalInWords">In Words:</label>
+                    <input type="text" id="totalInWords" name="totalInWords" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="monthYear">Month and Year of Examination:</label>
+                    <input type="text" id="monthYear" name="monthYear" value="May 2024" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="subjectsOffered">No. of Subjects Offered:</label>
+                    <input type="text" id="subjectsOffered" name="subjectsOffered" value="8" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="result">Result:</label>
+                    <input type="text" id="result" name="result" value="PASS" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="percentage">Percentage:</label>
+                    <input type="text" id="percentage" name="percentage" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="grade">Grade:</label>
+                    <input type="text" id="grade" name="grade" readonly>
+                </div>
+            </div>
+            <button type="button" onclick="calculateMarks()">Calculate Total Marks</button>
+        </form>
+    </div>
+    <script src="/js/script.js"></script>
+</body>
+</html>
